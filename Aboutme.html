@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Sophie Reck, a Graphic Designer." />
+  <title>About Me - Sophie Reck</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1d255b;
+      font-family: 'Acme Gothic', sans-serif;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .menu-bar {
+      background-color: #09103b;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .menu-bar .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .menu-bar .menu {
+      display: flex;
+      gap: 10px;
+    }
+
+    .menu-bar .menu a {
+      color: #e9e9e9;
+      text-decoration: none;
+      font-size: 30px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-bar .menu a:hover {
+      background-color: #32155b;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #09033c;
+      min-width: 160px;
+      z-index: 999;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #f3f3f3;
+      padding: 15px 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #451f5d;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 0px;
+    }
+
+    .profile-photo {
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+
+    .profile-photo img {
+      width: 120%;
+      
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .description {
+      flex: 1 1 400px;
+      max-width: 600px;
+      line-height: 1.5;
+      margin-top: 0px;
+    }
+
+    .contact {
+  background-color: #09103b;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact h3 {
+color: #98bad1;  
+padding-bottom: 50px;
+}
+,
+.contact p,
+
+.contact a {
+  color: white
+  ;
+  text-decoration: none;
+}
+
+    .contact a:hover {
+      text-decoration: underline;
+      color:white;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 30px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .linkedin-btn {
+      background-color: #352d8b;
+    }
+
+    .instagram-btn {
+      background-color: #48317d;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .description,
+      .profile-photo {
+        max-width: 90%;
+      }
+
+      h3 {
+        font-size: 60px;
+        color: #98bad1 !important
+        padding-bottom: 20px;
+      }
+    }
+p{ font-size: 30px;
+color: #e9e9e9
+;}
+
+a {
+  color: white;
+}
+
+    .about {
+      
+      color: #98bad1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div class="menu-bar">
+    <div class="logo">
+      <a href="index.html">Sophie Reck</a>
+    </div>
+    <div class="menu">
+      <div class="dropdown">
+        <a href="Aboutme.html">My Work</a>
+        <div class="dropdown-content">
+          <a href="Printdesign.html">Print Design</a>
+          <a href="Illustration.html">Illustration</a>
+          <a href="Branding.html">Branding</a>
+        </div>
+      </div>
+      <a href="Aboutme.html">About Me</a>
+    </div>
+  </div>
+  <section class="about">
+    <h3>About Me</h3>
+    <div class="container">
+      <div class="profile-photo">
+        <img src="Sophiephoto.jpg" alt="Photo of Sophie" />
+      </div>
+      <div class="description">
+        <p>
+          Hello! I'm Sophie, a passionate Graphic Designer and a current sophomore at the University of Illinois Urbana-Champaign. I am constantly expanding my skill set, highly motivated, and actively seeking challenging internship opportunities that offer valuable learning experiences.
+        </p>
+      </div>
+      <style>
+   
+      </style>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:Sreck3@illinois.edu">Sreck3@illinois.edu</a></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/sophie-reck-1565b532b/" target="_blank" class="linkedin-btn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" class="instagram-btn">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+
+        { margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #1d255b;
+        font-family: 'Acme Gothic', sans-serif;
+        }
+        
+        body {
+            @font-face {
+        font-family: 'Acme Gothic';
+        src: url('https://db.onlinewebfonts.com/t/263ad024161259960d3a778bf82ae1b4.eot?#iefix') format('embedded-opentype'),
+             url('https://db.onlinewebfonts.com/t/d4fedab6effa7608a05b1d15e4d1913e.woff2') format("woff2"),
+            url('https://db.onlinewebfonts.com/t/263ad024161259960d3a778bf82ae1b4.woff') format('woff');
+}
+h1  {
+    font-size: 50px
+}
+h2   {font-size: 35px;
+}
+h3 {font-size: 60px;
+margin-bottom: 2.5%;
+margin-top: 2.5%;
+padding: 0%;
+text-align: center;
+
+}
+.p{
+    font-size: 30px;
+    color: white ;
+    text-align: center;
+}
+.description {
+            text-align: center;
+            padding-right: 10%;
+            padding-left: 10%;
+            
+            font-size: 30px;
+            color: #98bad1;
+        }
+            font-family: 'Acme Gothic', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1d255b;
+    }
+
+.menu-bar {
+    background-color: #09103b;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-bar .logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.menu-bar .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-bar .menu a {
+    color: #e9e9e9;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 12px 24px;
+    display: inline-block;
+    text-align: center;
+    min-width: 140px;         
+    height: 50px;             
+    line-height: 26px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.menu-bar .menu a:hover {
+    background-color: #32155b;
+}
+
+.menu-bar .dropdown {
+    position: relative;
+}
+
+.menu-bar .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #09033c;
+    min-width: 180px;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 10px 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+
+.menu-bar .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.menu-bar .dropdown-content a {
+    color: #f3f3f3;
+    padding: 14px 24px;
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+}
+
+.menu-bar .dropdown-content a:hover {
+    background-color: #451f5d;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .slide {
+    display: none;
+    max-height: 80vh;
+    max-width: 80vw;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(119, 53, 157, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 100%;
+  }
+   .close {
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+    border-radius: 100%;
+    background-color: #09033c;
+    opacity: 0.5;
+    transition: opacity 250ms ease;
+  }
+  
+
+  .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+  .next { right: 30px; top: 50%; transform: translateY(-50%); }
+  .close { top: 20px; right: 40px; font-size: 50px; }
+
+  .slider-caption {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: rgba(31, 16, 39, 0.75); 
+    color: #fff; 
+    text-align: center;
+    padding: 50px 0; 
+    font-size: 18px; 
+    font-weight: bold; 
+    opacity: 0; 
+    padding-bottom: 100px;
+    transition: opacity 0.5s ease; 
+  }
+  .modal-content:hover .slider-caption {
+    opacity: 1;
+  }
+
+@media (max-width: 768px) {
+    .menu-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .menu-bar .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .menu-bar .menu a {
+        width: 100%;
+        min-width: unset;
+        font-size: 30px;
+    }
+}
+    
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content .box .image-container {
+        height: 250px;
+    }
+
+    .content .box .text-overlay {
+        font-size: 28px; 
+    }
+    .fixed-box {
+    flex: 0 0 auto;         
+    width: 220px;
+    height: 320px;
+}
+.fixed-box {
+    flex: 0 0 auto;
+    width: 240px;
+    height: auto;
+}
+.fixed-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    flex-shrink: 0;
+    justify-items: center ;
+}
+}
+
+
+    

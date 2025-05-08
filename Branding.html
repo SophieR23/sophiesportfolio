@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  </style>
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="logo">
+      <a href="index.html">Sophie Reck</a>
+    </div>
+    <div class="menu">
+      <div class="dropdown">
+        <a href=>My Work</a>
+        <div class="dropdown-content">
+          <a href="Printdesign.html">Print Design</a>
+          <a href="Illustration.html">Illustration</a>
+          <a href="Branding.html">Branding</a>
+        </div>
+      </div>
+      <a href="Aboutme.html">About Me</a>
+    </div>
+  </div>
+
+  <div class="description">
+    <h3>Branding</h3>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="Branding/Mockup.jpg" class="gallery-image" alt="Cover" onclick="openModal('modal1')">
+    </div>
+    <div class="gallery-item">
+      <img src="Branding/EDJFInal.png" class="gallery-image" alt="Page 2" onclick="openModal('modal2')"> 
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="Branding/SophieReckFinalBox copy.png" class="gallery-image" alt="Cover" onclick="openModal('modal3')">
+    </div>
+    <div class="gallery-item">
+      <img src="Branding/Sophie Reck A1 Landscape Posterv05.jpg" class="gallery-image" alt="Page 2" onclick="openModal('modal4')"> 
+    </div>
+   
+  </div>
+  
+
+  <div id="modal1" class="modal">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <span class="prev" onclick="changeSlide('modal1', -1)">&#10094;</span>
+    <span class="next" onclick="changeSlide('modal1', 1)">&#10095;</span>
+    <div class="modal-content">
+      <div class="slider-caption">
+        <p>Logo design and mockup of Tiger Gardens Salsa Branding</p>
+      </div>
+      <img class="slide active" src="Branding/Mockup.jpg" alt="Cover">
+      <img class="slide" src="Branding/logo.png" alt="Page 2">
+      
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <span class="prev" onclick="changeSlide('modal2', -1)">&#10094;</span>
+    <span class="next" onclick="changeSlide('modal2', 1)">&#10095;</span>
+    <div class="modal-content">
+      <div class="slider-caption">
+        <p>Designs centered around K Bowl resturant which includes a new logo design, environmental graphics, and brand magazine. </p>
+      </div>
+      <img class="slide active" src="Branding/EDJFInal.png" alt="Image 1">
+      <img class="slide" src="Branding/EnvironmentalGraphics3.png" alt="Image 2">
+      <img class="slide" src="Branding/Structure .png" alt="Image 3">
+      <img class="slide" src="Branding/Final version.png" alt="Image 4">
+      <img class="slide" src="Branding/Maginzines.png" alt="Image 5">
+      <img class="slide" src="Branding/Maginzines2.png" alt="Image 6">
+      <img class="slide" src="Branding/Maginzines3.png" alt="Image 7">
+      <img class="slide" src="Branding/Maginzines4.png" alt="Image 8">
+      <img class="slide" src="Branding/Maginzines5.png" alt="Image 9">
+      <img class="slide" src="Branding/Maginzines7.png" alt="Image 10">
+      <img class="slide" src="Branding/Maginzines8.png" alt="Image 11">
+      </div>
+      </div>
+    </div>
+ <div id="modal3" class="modal">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <span class="prev" onclick="changeSlide('modal3', -1)">&#10094;</span>
+    <span class="next" onclick="changeSlide('modal3', 1)">&#10095;</span>
+    <div class="modal-content">
+      <div class="slider-caption">
+        <p>Branding special edition Eclipse themed cereal box design of Lucky Charms Brand. </p>
+      </div>
+      <img class="slide active" src="Branding/SophieReckFinalBox.png" alt="Image 1">
+      <img class="slide" src="Branding/new ceral back.png" alt="Image 2">
+      <img class="slide" src="Branding/mockup copy.jpg" alt="Image 3">
+    </div>
+    </div>
+  </div>
+
+      <div id="modal4" class="modal">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <span class="prev" onclick="changeSlide('modal4', -1)">&#10094;</span>
+        <span class="next" onclick="changeSlide('modal4', 1)">&#10095;</span>
+        <div class="modal-content">
+          <div class="slider-caption">
+            <p>Branding proposal for Chabao village tourism development. Stackable tea box based on brand idenity of the surrounding area and architectural proposals.   </p>
+          </div>
+          <img class="slide active" src="Branding/Sophie Reck A1 Landscape Posterv05.jpg" alt="Image 1">
+          <img class="slide" src="Branding/Sophie_Reck_TeaBox_Front_Back_Design.png" alt="Image 2">
+          <img class="slide" src="Branding/Tea Box Image.png" alt="Image 3">
+    </div>
+  </div>
+  </div>
+
+
+  <script>
+    let slideIndex = 0;
+
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "flex";
+      slideIndex = 0;
+      showSlide(modalId, slideIndex);
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "none";
+    }
+
+    function changeSlide(modalId, n) {
+      const modal = document.getElementById(modalId);
+      const slides = modal.querySelectorAll(".slide");
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(modalId, slideIndex);
+    }
+
+    function showSlide(modalId, index) {
+      const modal = document.getElementById(modalId);
+      const slides = modal.querySelectorAll(".slide");
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    // Close modal when clicking outside modal content
+    window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+};
+  </script>
+
+</body>
+</html>

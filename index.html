@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sophie Reck - Portfolio</title>
+    <meta name="description" content="Portfolio of name, a Graphic Designer showcasing Print Design, Illustration, and Branding works.">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style> 
+
+        { margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #1d255b;
+        font-family: 'Acme Gothic', sans-serif;
+        }
+         
+        body {
+            @font-face {
+        font-family: 'Acme Gothic';
+        src: url('https://db.onlinewebfonts.com/t/263ad024161259960d3a778bf82ae1b4.eot?#iefix') format('embedded-opentype'),
+             url('https://db.onlinewebfonts.com/t/d4fedab6effa7608a05b1d15e4d1913e.woff2') format("woff2"),
+            url('https://db.onlinewebfonts.com/t/263ad024161259960d3a778bf82ae1b4.woff') format('woff');
+}
+h1  {
+    font-size: 50px
+}
+h2   {font-size: 35px;
+}
+
+.description {
+            text-align: center;
+            padding-right: 10%;
+            padding-left: 10%;
+            margin: 40px 0;
+            font-size: 18px;
+            color: #98bad1;
+        }
+            font-family: 'Acme Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1d255b;
+
+        }
+
+        /* Main Content */
+        .content {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        gap: 20px;
+    }
+    /* Mobile responsive layout */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content .box .image-container {
+        height: 250px; /* Smaller height for smaller screens */
+    }
+
+    .content .box .text-overlay {
+        font-size: 28px; 
+    }
+    .fixed-box {
+    flex: 0 0 auto;         
+    width: 220px;
+    height: 320px;
+}
+.fixed-box {
+    flex: 0 0 auto;
+    width: 240px;
+    height: auto;
+}
+.fixed-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+}
+
+    .content .box {
+        flex: 100px;
+        margin: 0 10px;
+        padding: 10;
+        background-color: #5988C1;
+        max-width: %;
+    
+        text-align: center;
+    
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        position: relative;
+    }
+
+    .content .box:hover {
+        transform: scale(1.05);
+    }
+
+    .content .box .image-container {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        border: 4px solid #0f0f3a;
+    }
+
+    .content .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content .box .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    opacity: 1; 
+    background-color: rgba(54, 27, 70, 0.75);
+    padding: 5px 10px;
+    border-radius: 10px;
+    pointer-events: none;
+    .content .box:hover .text-overlay {
+        opacity: 1;
+    }
+}
+</style>
+    </style>
+   
+</head>
+
+<body>
+
+    <div class="menu-bar">
+        <div class="logo">
+            <a href="index.html">Sophie Reck</a>
+        </div>
+        <div class="menu">
+            <div class="dropdown">
+                <a href=>My Work</a>
+                <div class="dropdown-content">
+                    <a href="Printdesign.html">Print Design</a>
+                    <a href="Illustration.html">Illustration</a>
+                    <a href="Branding.html">Branding</a>
+                </div>
+            </div>
+            <a href="Aboutme.html">About Me</a>
+        </div>
+    </div>
+    </div>
+
+ <div class="description">
+    <h1>Welcome!</h1>
+    <h2>My name is Sophie, a Graphic Designer with a  passion for visual communication and creative expression.</h2>
+</div>
+
+ <div class="content">
+        <div class="box">
+            <div class="image-container">
+                <a href="Printdesign.html" class="overlay-link">
+            <img src="print design.png" alt="Print Design">
+            <div class="text-overlay">Print Design</div>    
+       </div>
+    </div>
+
+        <div class="box">
+            <div class="image-container">
+                <a href="Illustration.html" class="overlay-link">
+                <img src="test22.png" alt="Illustration" class="fixed-size">
+                <div class="text-overlay">Illustration</div>
+        </div>
+    </div>
+        
+        <div class="box">
+            <div class="image-container">
+                <a href="Branding.html" class="overlay-link">
+    <img src="test3.png" alt="Branding" class="fixed-size">
+    <div class="text-overlay">Branding</div>
+    </div>
+    </div>
+
+</body>
+
+
+</html>
